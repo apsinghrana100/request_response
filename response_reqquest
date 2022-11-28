@@ -1,0 +1,54 @@
+
+
+
+const http=require('http');
+const { hostname } = require('os');
+
+http.createServer((request,resp)=>{
+    resp.writeHead(200,{'content-type':'text\html'});
+        resp.write("<html>");
+        resp.write("<title>");
+        resp.write("</title>");
+        resp.write("<bodt><p>Welcome to my Node Js</p></body>")
+        resp.write("</html>");
+        resp.end();
+    
+}).listen(4000);
+
+
+
+
+
+const http=require('http');
+const { hostname } = require('os');
+
+http.createServer((request,resp)=>{
+    resp.writeHead(200,{'content-type':'text\html'});
+    if(request.url==='/home')
+    {
+        resp.write("<html>");
+        resp.write("<title>");
+        resp.write("</title>");
+        resp.write("<bodt><p>Welcome to my Node Js home</p></body>")
+        resp.write("</html>");
+        resp.end();
+    }
+    else if(request.url==='/contact')
+    {
+        resp.write("<html>");
+        resp.write("<title>");
+        resp.write("</title>");
+        resp.write("<bodt><p>Welcome to my Node Js contact</p></body>")
+        resp.write("</html>");
+        resp.end();
+
+    }else if(request.url==='/node'){
+        resp.write("<html>");
+        resp.write("<title>");
+        resp.write("</title>");
+        resp.write("<bodt><p>Welcome to my Node Js</p></body>")
+        resp.write("</html>");
+        resp.end();
+
+    }
+}).listen(4000);
